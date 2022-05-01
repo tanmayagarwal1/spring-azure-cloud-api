@@ -1,0 +1,98 @@
+1. Client : localhost:8080/api/v1/client/register
+
+{
+    "username" : "agarwalTanmay",
+    "password" : "testPassword",
+    "role" : "ADMIN",
+    "email" : "tanmayagarwal00010@gmail.com",
+    "phone" : 8886049630,
+    "age" : 22,
+    "organization" : "UHG",
+    "address" : {
+        "city" : "Hyderabad",
+        "country" : "India",
+        "state" : "Telangana",
+        "postalCode" : 500029
+    },
+    "cardDetails" : {
+        "cardNumber" : "4242-4242-4242-4242",
+        "validTill" : "07/2022",
+        "cvv" : 777
+    }
+}
+
+2. Login
+localhost:8080/login?username=agarwalTanmay&password=testPassword
+
+2.1 Subscription
+{
+    "name" : "UHG-GPD-TEAMS-SUBSCRIPTION",
+    "type" : "PAID",
+    "activeDirectory":{
+        "objectId": "8JW9q3K"
+    }
+}
+
+3. Resource Group
+{
+    "name" : "UHG-TEAMS-RG",
+    "region" : "CENTRALUS",
+    "subscription" : {
+        "name" : "UHG TEAMS"
+    }
+}
+
+4. AKS Cluster
+{
+    "name" : "UHG-TEAMS-CENTRALUS-AKS",
+    "region" : "CENTRALUS",
+    "version" : "1.20.15",
+    "cpu" : "5",
+    "os" : "Linux",
+    "memory" : "2 GiB",
+    "resourceGroup" : {
+        "resourceId" : "RZumIy9"
+    }
+}
+
+5. Aks NodePool :
+{
+    "name" : "agent-pool",
+    "sku" : "BASIC",
+    "aksCluster" : {
+        "resourceId" : "34rkulH"
+    }
+}
+
+6. Node
+{
+    "name" : "apppool",
+    "labelSelectors" : "agentpool:apppool",
+    "nodePool" : {
+        "resourceId" : "qRCG3xD"
+    }
+}
+
+7. Pod
+{
+    "name" : "dce-drug-pricing-api",
+    "node" : {
+        "resourceId" : "qRCG3xD"
+    }
+}
+
+8. Container
+{
+    "image" : "gov-prog-digital/dce-drug-pricing-api:v1",
+    "pod" : {
+        "resourceId" : "IxPrLxR"
+    }
+}
+
+9. Storage Account
+{
+    "name" : "UHG_TEAMS_SA",
+    "resourceGroup" : {
+        "resourceId" : "cm9FLgW"
+    }
+}
