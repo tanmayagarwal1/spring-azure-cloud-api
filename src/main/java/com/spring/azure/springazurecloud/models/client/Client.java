@@ -4,9 +4,8 @@ import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import com.spring.azure.springazurecloud.configuration.constants.Constants;
-import com.spring.azure.springazurecloud.enums.ClientRole;
+import com.spring.azure.springazurecloud.enums.general.ClientRole;
 import com.spring.azure.springazurecloud.models.directory.ActiveDirectory;
-import com.sun.istack.NotNull;
 import lombok.Data;
 
 import javax.persistence.*;

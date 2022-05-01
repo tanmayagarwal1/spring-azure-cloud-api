@@ -1,8 +1,8 @@
 package com.spring.azure.springazurecloud.service.payment;
 
 import com.spring.azure.springazurecloud.configuration.constants.Constants;
-import com.spring.azure.springazurecloud.enums.PaymentStatus;
-import com.spring.azure.springazurecloud.exception.UserCreationException;
+import com.spring.azure.springazurecloud.enums.payment.PaymentStatus;
+import com.spring.azure.springazurecloud.exception.client.UserCreationException;
 import com.spring.azure.springazurecloud.models.client.CardDetails;
 import com.spring.azure.springazurecloud.models.client.Client;
 import com.spring.azure.springazurecloud.utils.LogHelper;
@@ -12,14 +12,9 @@ import com.stripe.model.Charge;
 import com.stripe.model.Customer;
 import com.stripe.model.Token;
 import com.stripe.param.CustomerRetrieveParams;
-import lombok.RequiredArgsConstructor;
-import org.springframework.context.annotation.PropertySource;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Properties;
 
 
 public class PaymentGatewayService {

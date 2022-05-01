@@ -3,7 +3,7 @@ package com.spring.azure.springazurecloud.models.registry;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.spring.azure.springazurecloud.configuration.constants.Constants;
-import com.spring.azure.springazurecloud.enums.ContainerRepositorySku;
+import com.spring.azure.springazurecloud.enums.acr.ContainerRepositorySku;
 import com.spring.azure.springazurecloud.models.resources.Resource;
 import lombok.Data;
 

@@ -1,7 +1,12 @@
 package com.spring.azure.springazurecloud.configuration.advice;
 
-import com.spring.azure.springazurecloud.dto.ResponseDto;
-import com.spring.azure.springazurecloud.exception.*;
+import com.spring.azure.springazurecloud.dto.response.ResponseDto;
+import com.spring.azure.springazurecloud.exception.acr.ContainerRegistryException;
+import com.spring.azure.springazurecloud.exception.aks.AksException;
+import com.spring.azure.springazurecloud.exception.apim.ApimException;
+import com.spring.azure.springazurecloud.exception.client.UserCreationException;
+import com.spring.azure.springazurecloud.exception.resource.ResourceGroupException;
+import com.spring.azure.springazurecloud.exception.storage.StorageAccountException;
 import com.spring.azure.springazurecloud.handlers.ResponseHandler;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;

@@ -3,7 +3,7 @@ package com.spring.azure.springazurecloud.models.aks;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.spring.azure.springazurecloud.configuration.constants.Constants;
-import com.spring.azure.springazurecloud.enums.PodStatus;
+import com.spring.azure.springazurecloud.enums.aks.PodStatus;
 import com.spring.azure.springazurecloud.models.resources.Resource;
 import lombok.Data;
 

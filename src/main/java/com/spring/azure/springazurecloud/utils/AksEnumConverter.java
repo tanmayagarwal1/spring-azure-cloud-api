@@ -1,6 +1,6 @@
 package com.spring.azure.springazurecloud.utils;
 
-import com.spring.azure.springazurecloud.enums.AksSku;
+import com.spring.azure.springazurecloud.enums.aks.AksSku;
 
 import javax.persistence.AttributeConverter;
 

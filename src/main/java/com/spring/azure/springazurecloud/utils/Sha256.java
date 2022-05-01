@@ -1,6 +1,6 @@
 package com.spring.azure.springazurecloud.utils;
 
-import com.spring.azure.springazurecloud.exception.ContainerRegistryException;
+import com.spring.azure.springazurecloud.exception.acr.ContainerRegistryException;
 import lombok.experimental.UtilityClass;
 
 import java.nio.charset.StandardCharsets;

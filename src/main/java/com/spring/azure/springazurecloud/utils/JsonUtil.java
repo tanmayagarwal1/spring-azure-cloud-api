@@ -5,7 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import com.google.gson.Gson;
 import com.spring.azure.springazurecloud.configuration.constants.Constants;
-import com.spring.azure.springazurecloud.exception.JsonConversionException;
+import com.spring.azure.springazurecloud.exception.general.JsonConversionException;
 import lombok.experimental.UtilityClass;
 
 import javax.servlet.http.HttpServletRequest;

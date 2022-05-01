@@ -4,8 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import com.spring.azure.springazurecloud.configuration.constants.Constants;
-import com.spring.azure.springazurecloud.enums.SubscriptionType;
-import com.spring.azure.springazurecloud.models.client.CardDetails;
+import com.spring.azure.springazurecloud.enums.subscripton.SubscriptionType;
 import com.spring.azure.springazurecloud.models.resources.ResourceGroup;
 import lombok.Data;
 

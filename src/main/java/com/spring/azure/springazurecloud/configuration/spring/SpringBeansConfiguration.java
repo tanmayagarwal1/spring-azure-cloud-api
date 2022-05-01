@@ -1,17 +1,14 @@
 package com.spring.azure.springazurecloud.configuration.spring;
 
 import com.spring.azure.springazurecloud.configuration.constants.Constants;
+import com.spring.azure.springazurecloud.service.resources.validation.GlobalValidationService;
 import com.spring.azure.springazurecloud.service.payment.PaymentGatewayService;
 import com.spring.azure.springazurecloud.service.cache.CacheService;
-import com.spring.azure.springazurecloud.service.resource.acr.ContainerRegistryService;
-import com.spring.azure.springazurecloud.service.resource.acr.ContainerRegistryValidationService;
-import com.spring.azure.springazurecloud.service.resource.aks.AksService;
-import com.spring.azure.springazurecloud.service.resource.aks.AksValidationService;
-import com.spring.azure.springazurecloud.service.resource.apim.ApimService;
-import com.spring.azure.springazurecloud.service.resource.apim.ApimValidationService;
-import com.spring.azure.springazurecloud.service.resource.group.ResourceGroupService;
-import com.spring.azure.springazurecloud.service.resource.storage.StorageAccountService;
-import com.spring.azure.springazurecloud.service.resource.storage.StorageAccountValidationService;
+import com.spring.azure.springazurecloud.service.resources.acr.ContainerRegistryService;
+import com.spring.azure.springazurecloud.service.resources.aks.AksService;
+import com.spring.azure.springazurecloud.service.resources.apim.ApimService;
+import com.spring.azure.springazurecloud.service.resources.group.ResourceGroupService;
+import com.spring.azure.springazurecloud.service.resources.storage.StorageAccountService;
 import com.spring.azure.springazurecloud.service.security.ClientService;
 import com.spring.azure.springazurecloud.service.security.JwtService;
 import com.spring.azure.springazurecloud.service.subscription.SubscriptionService;
@@ -68,6 +65,12 @@ public class SpringBeansConfiguration {
         return new CacheService(cacheManager);
     }
 
+    @Bean(name = "GlobalValidationService")
+    public GlobalValidationService globalValidationService(@Qualifier("HibernateSessionFactory")SessionFactory sessionFactory,
+                                                           @Qualifier("HibernateTransactionTemplate")TransactionTemplate transactionTemplate){
+        return new GlobalValidationService(sessionFactory, transactionTemplate);
+    }
+
     @Bean(name = "SubscriptionService")
     public SubscriptionService subscriptionService(@Qualifier("HibernateSessionFactory")SessionFactory sessionFactory,
                                                    @Qualifier("HibernateTransactionTemplate")TransactionTemplate transactionTemplate){
@@ -81,56 +84,32 @@ public class SpringBeansConfiguration {
         return new ResourceGroupService(sessionFactory, transactionTemplate, paymentGatewayService);
     }
 
-    @Bean(name = "AksValidationService")
-    public AksValidationService aksValidationService(@Qualifier("HibernateSessionFactory")SessionFactory sessionFactory,
-                                                     @Qualifier("HibernateTransactionTemplate")TransactionTemplate transactionTemplate){
-        return new AksValidationService(sessionFactory, transactionTemplate);
-    }
-
     @Bean(name = "AksService")
     public AksService aksService(@Qualifier("HibernateSessionFactory")SessionFactory sessionFactory,
                                  @Qualifier("HibernateTransactionTemplate")TransactionTemplate transactionTemplate,
-                                 @Qualifier("AksValidationService")AksValidationService aksValidationService){
-        return new AksService(sessionFactory, transactionTemplate, aksValidationService);
-    }
-
-    @Bean(name = "StorageAccountValidationService")
-    public StorageAccountValidationService storageAccountValidationService(@Qualifier("HibernateSessionFactory")SessionFactory sessionFactory,
-                                                                           @Qualifier("HibernateTransactionTemplate")TransactionTemplate transactionTemplate){
-        return new StorageAccountValidationService(sessionFactory, transactionTemplate);
+                                 @Qualifier("GlobalValidationService")GlobalValidationService globalValidationService){
+        return new AksService(sessionFactory, transactionTemplate, globalValidationService);
     }
 
     @Bean(name = "StorageAccountService")
     public StorageAccountService storageAccountService(@Qualifier("HibernateSessionFactory")SessionFactory sessionFactory,
                                                        @Qualifier("HibernateTransactionTemplate")TransactionTemplate transactionTemplate,
-                                                       @Qualifier("StorageAccountValidationService")StorageAccountValidationService validationService){
+                                                       @Qualifier("GlobalValidationService")GlobalValidationService validationService){
         return new StorageAccountService(sessionFactory, transactionTemplate, validationService);
-    }
-
-    @Bean(name = "ApimValidationService")
-    public ApimValidationService apimValidationService(@Qualifier("HibernateSessionFactory")SessionFactory sessionFactory,
-                                                                 @Qualifier("HibernateTransactionTemplate")TransactionTemplate transactionTemplate){
-        return new ApimValidationService(sessionFactory, transactionTemplate);
     }
 
     @Bean(name = "ApimService")
     public ApimService apimService(@Qualifier("HibernateSessionFactory")SessionFactory sessionFactory,
-                                                       @Qualifier("HibernateTransactionTemplate")TransactionTemplate transactionTemplate,
-                                                       @Qualifier("ApimValidationService")ApimValidationService validationService){
-        return new ApimService(sessionFactory, transactionTemplate, validationService);
-    }
-
-    @Bean(name = "ContainerRegistryValidationService")
-    public ContainerRegistryValidationService validationService(@Qualifier("HibernateSessionFactory")SessionFactory sessionFactory,
-                                                                    @Qualifier("HibernateTransactionTemplate")TransactionTemplate transactionTemplate){
-        return new ContainerRegistryValidationService(sessionFactory, transactionTemplate);
+                                   @Qualifier("HibernateTransactionTemplate")TransactionTemplate transactionTemplate,
+                                   @Qualifier("GlobalValidationService")GlobalValidationService globalValidationService){
+        return new ApimService(sessionFactory, transactionTemplate, globalValidationService);
     }
 
     @Bean(name = "ContainerRegistryService")
-    public ContainerRegistryService apimService(@Qualifier("HibernateSessionFactory")SessionFactory sessionFactory,
+    public ContainerRegistryService containerRegistryService(@Qualifier("HibernateSessionFactory")SessionFactory sessionFactory,
                                    @Qualifier("HibernateTransactionTemplate")TransactionTemplate transactionTemplate,
-                                   @Qualifier("ContainerRegistryValidationService")ContainerRegistryValidationService validationService){
-        return new ContainerRegistryService(sessionFactory, transactionTemplate, validationService);
+                                                @Qualifier("GlobalValidationService")GlobalValidationService globalValidationService){
+        return new ContainerRegistryService(sessionFactory, transactionTemplate, globalValidationService);
     }
 
 }

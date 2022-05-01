@@ -1,8 +1,8 @@
 package com.spring.azure.springazurecloud.handlers;
 
 import com.spring.azure.springazurecloud.configuration.constants.Constants;
-import com.spring.azure.springazurecloud.dto.ResponseDto;
-import com.spring.azure.springazurecloud.exception.JsonConversionException;
+import com.spring.azure.springazurecloud.dto.response.ResponseDto;
+import com.spring.azure.springazurecloud.exception.general.JsonConversionException;
 import com.spring.azure.springazurecloud.utils.JsonUtil;
 import com.spring.azure.springazurecloud.utils.LogHelper;
 import org.springframework.http.HttpStatus;

@@ -2,7 +2,7 @@ package com.spring.azure.springazurecloud.filters;
 
 import com.spring.azure.springazurecloud.configuration.constants.Constants;
 import com.spring.azure.springazurecloud.configuration.constants.RestRoutes;
-import com.spring.azure.springazurecloud.dto.ResponseDto;
+import com.spring.azure.springazurecloud.dto.response.ResponseDto;
 import com.spring.azure.springazurecloud.handlers.ResponseHandler;
 import com.spring.azure.springazurecloud.service.security.JwtService;
 import com.spring.azure.springazurecloud.utils.LogHelper;

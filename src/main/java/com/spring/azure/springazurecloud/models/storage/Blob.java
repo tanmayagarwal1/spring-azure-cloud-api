@@ -3,7 +3,7 @@ package com.spring.azure.springazurecloud.models.storage;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.spring.azure.springazurecloud.configuration.constants.Constants;
-import com.spring.azure.springazurecloud.enums.StorageAccessTier;
+import com.spring.azure.springazurecloud.enums.storage.StorageAccessTier;
 import com.spring.azure.springazurecloud.models.resources.Resource;
 import lombok.Data;
 

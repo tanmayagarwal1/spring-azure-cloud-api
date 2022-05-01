@@ -2,11 +2,12 @@ package com.spring.azure.springazurecloud.controllers.client;
 
 import com.spring.azure.springazurecloud.configuration.constants.Constants;
 import com.spring.azure.springazurecloud.configuration.constants.RestRoutes;
-import com.spring.azure.springazurecloud.dto.ResponseDto;
+import com.spring.azure.springazurecloud.dto.response.ResponseDto;
 import com.spring.azure.springazurecloud.handlers.ResponseHandler;
 import com.spring.azure.springazurecloud.models.client.Client;
 import com.spring.azure.springazurecloud.service.security.ClientService;
 import com.spring.azure.springazurecloud.service.security.JwtService;
+import com.spring.azure.springazurecloud.utils.GlobalControllerHelper;
 import com.spring.azure.springazurecloud.utils.JsonUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpHeaders;
@@ -45,8 +46,7 @@ public class ClientController {
         Principal principal = request.getUserPrincipal();
         String username = principal.getName();
         Client client = clientService.getClient(username);
-        String json = JsonUtil.toJson(client).get();
-        ResponseHandler.handleResponse(response,HttpStatus.OK,json);
+        GlobalControllerHelper.handleModelControllerResponse(client, response);
     }
 
     @GetMapping(RestRoutes.CLIENT.REFRESH_TOKEN)

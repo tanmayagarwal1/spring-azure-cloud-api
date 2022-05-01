@@ -1,7 +1,7 @@
 package com.spring.azure.springazurecloud.service.security;
 
 import com.spring.azure.springazurecloud.configuration.constants.Constants;
-import com.spring.azure.springazurecloud.exception.UserCreationException;
+import com.spring.azure.springazurecloud.exception.client.UserCreationException;
 import com.spring.azure.springazurecloud.models.client.CardDetails;
 import com.spring.azure.springazurecloud.models.client.Client;
 import com.spring.azure.springazurecloud.models.directory.ActiveDirectory;

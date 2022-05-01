@@ -3,11 +3,10 @@ package com.spring.azure.springazurecloud.models.aks;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.spring.azure.springazurecloud.configuration.constants.Constants;
-import com.spring.azure.springazurecloud.enums.Region;
+import com.spring.azure.springazurecloud.enums.general.Region;
 import com.spring.azure.springazurecloud.models.resources.Resource;
 import com.spring.azure.springazurecloud.models.resources.ResourceGroup;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
 import java.util.HashSet;

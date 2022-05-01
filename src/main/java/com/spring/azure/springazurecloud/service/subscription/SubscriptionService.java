@@ -1,6 +1,6 @@
 package com.spring.azure.springazurecloud.service.subscription;
 
-import com.spring.azure.springazurecloud.exception.SubscriptionCreationException;
+import com.spring.azure.springazurecloud.exception.client.SubscriptionCreationException;
 import com.spring.azure.springazurecloud.models.client.Client;
 import com.spring.azure.springazurecloud.models.directory.Subscription;
 import com.spring.azure.springazurecloud.utils.IdentityGenerator;
