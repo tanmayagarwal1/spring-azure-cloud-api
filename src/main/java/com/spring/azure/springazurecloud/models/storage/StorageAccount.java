@@ -1,4 +1,4 @@
-package com.spring.azure.springazurecloud.models.storage.account;
+package com.spring.azure.springazurecloud.models.storage;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;

@@ -1,9 +1,8 @@
 package com.spring.azure.springazurecloud.service.resource.storage;
 
-import com.spring.azure.springazurecloud.models.aks.AksCluster;
 import com.spring.azure.springazurecloud.models.resources.Resource;
 import com.spring.azure.springazurecloud.models.resources.ResourceGroup;
-import com.spring.azure.springazurecloud.models.storage.account.StorageAccount;
+import com.spring.azure.springazurecloud.models.storage.StorageAccount;
 import lombok.RequiredArgsConstructor;
 import org.hibernate.SessionFactory;
 import org.springframework.transaction.support.TransactionTemplate;

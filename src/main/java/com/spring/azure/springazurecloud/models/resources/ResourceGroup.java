@@ -7,10 +7,9 @@ import com.spring.azure.springazurecloud.enums.Region;
 import com.spring.azure.springazurecloud.enums.ResourceGroupStatus;
 import com.spring.azure.springazurecloud.models.aks.AksCluster;
 import com.spring.azure.springazurecloud.models.apim.Apim;
-import com.spring.azure.springazurecloud.models.client.CardDetails;
 import com.spring.azure.springazurecloud.models.directory.Subscription;
 import com.spring.azure.springazurecloud.models.registry.ContainerRegistry;
-import com.spring.azure.springazurecloud.models.storage.account.StorageAccount;
+import com.spring.azure.springazurecloud.models.storage.StorageAccount;
 import lombok.Data;
 
 import javax.persistence.*;

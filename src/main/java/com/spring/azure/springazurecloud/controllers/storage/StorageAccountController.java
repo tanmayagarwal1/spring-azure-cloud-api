@@ -1,4 +1,4 @@
-package com.spring.azure.springazurecloud.controllers.storage.account;
+package com.spring.azure.springazurecloud.controllers.storage;
 
 
 import com.spring.azure.springazurecloud.configuration.constants.Constants;
@@ -6,10 +6,10 @@ import com.spring.azure.springazurecloud.configuration.constants.RestRoutes;
 import com.spring.azure.springazurecloud.dto.StorageAccountRequestDto;
 import com.spring.azure.springazurecloud.exception.StorageAccountException;
 import com.spring.azure.springazurecloud.handlers.ResponseHandler;
-import com.spring.azure.springazurecloud.models.storage.account.Blob;
-import com.spring.azure.springazurecloud.models.storage.account.StorageContainer;
-import com.spring.azure.springazurecloud.models.storage.account.File;
-import com.spring.azure.springazurecloud.models.storage.account.StorageAccount;
+import com.spring.azure.springazurecloud.models.storage.Blob;
+import com.spring.azure.springazurecloud.models.storage.StorageContainer;
+import com.spring.azure.springazurecloud.models.storage.File;
+import com.spring.azure.springazurecloud.models.storage.StorageAccount;
 import com.spring.azure.springazurecloud.service.resource.storage.StorageAccountService;
 import com.spring.azure.springazurecloud.utils.JsonUtil;
 import lombok.RequiredArgsConstructor;

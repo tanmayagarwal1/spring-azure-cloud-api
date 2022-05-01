@@ -1,4 +1,4 @@
-package com.spring.azure.springazurecloud.controllers;
+package com.spring.azure.springazurecloud.controllers.resource;
 
 import com.spring.azure.springazurecloud.configuration.constants.Constants;
 import com.spring.azure.springazurecloud.configuration.constants.RestRoutes;

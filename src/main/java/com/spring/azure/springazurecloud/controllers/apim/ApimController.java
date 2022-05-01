@@ -7,7 +7,6 @@ import com.spring.azure.springazurecloud.exception.ApimException;
 import com.spring.azure.springazurecloud.handlers.ResponseHandler;
 import com.spring.azure.springazurecloud.models.apim.Api;
 import com.spring.azure.springazurecloud.models.apim.Apim;
-import com.spring.azure.springazurecloud.models.storage.account.StorageAccount;
 import com.spring.azure.springazurecloud.service.resource.apim.ApimService;
 import com.spring.azure.springazurecloud.utils.JsonUtil;
 import lombok.RequiredArgsConstructor;

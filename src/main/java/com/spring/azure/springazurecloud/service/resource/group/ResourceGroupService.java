@@ -6,7 +6,7 @@ import com.spring.azure.springazurecloud.exception.ResourceGroupException;
 import com.spring.azure.springazurecloud.models.client.Client;
 import com.spring.azure.springazurecloud.models.directory.Subscription;
 import com.spring.azure.springazurecloud.models.resources.ResourceGroup;
-import com.spring.azure.springazurecloud.service.PaymentGatewayService;
+import com.spring.azure.springazurecloud.service.payment.PaymentGatewayService;
 import com.spring.azure.springazurecloud.utils.IdentityGenerator;
 import com.stripe.exception.StripeException;
 import lombok.RequiredArgsConstructor;

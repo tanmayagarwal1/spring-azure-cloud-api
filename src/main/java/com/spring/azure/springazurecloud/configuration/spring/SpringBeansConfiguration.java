@@ -1,7 +1,7 @@
 package com.spring.azure.springazurecloud.configuration.spring;
 
 import com.spring.azure.springazurecloud.configuration.constants.Constants;
-import com.spring.azure.springazurecloud.service.PaymentGatewayService;
+import com.spring.azure.springazurecloud.service.payment.PaymentGatewayService;
 import com.spring.azure.springazurecloud.service.cache.CacheService;
 import com.spring.azure.springazurecloud.service.resource.acr.ContainerRegistryService;
 import com.spring.azure.springazurecloud.service.resource.acr.ContainerRegistryValidationService;

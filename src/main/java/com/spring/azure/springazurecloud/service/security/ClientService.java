@@ -5,7 +5,7 @@ import com.spring.azure.springazurecloud.exception.UserCreationException;
 import com.spring.azure.springazurecloud.models.client.CardDetails;
 import com.spring.azure.springazurecloud.models.client.Client;
 import com.spring.azure.springazurecloud.models.directory.ActiveDirectory;
-import com.spring.azure.springazurecloud.service.PaymentGatewayService;
+import com.spring.azure.springazurecloud.service.payment.PaymentGatewayService;
 import com.spring.azure.springazurecloud.service.cache.CacheService;
 import com.spring.azure.springazurecloud.utils.IdentityGenerator;
 import com.spring.azure.springazurecloud.utils.LogHelper;

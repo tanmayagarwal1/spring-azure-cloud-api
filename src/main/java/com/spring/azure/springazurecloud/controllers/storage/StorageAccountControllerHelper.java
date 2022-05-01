@@ -1,4 +1,4 @@
-package com.spring.azure.springazurecloud.controllers.storage.account;
+package com.spring.azure.springazurecloud.controllers.storage;
 
 import com.spring.azure.springazurecloud.configuration.constants.Constants;
 import com.spring.azure.springazurecloud.dto.ResponseDto;

@@ -1,4 +1,4 @@
-package com.spring.azure.springazurecloud.service;
+package com.spring.azure.springazurecloud.service.payment;
 
 import com.spring.azure.springazurecloud.configuration.constants.Constants;
 import com.spring.azure.springazurecloud.enums.PaymentStatus;
