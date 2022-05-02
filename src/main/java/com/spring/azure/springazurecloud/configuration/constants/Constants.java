@@ -6,6 +6,8 @@ public class Constants {
     public static final String APPLICATION_NAME =
             PropertyUtils.getInstance().properties.getProperty("spring.application.name");
 
+    public static final String PROPERTIES_ENVIRONMENT_VAR="ACTIVE_PROFILES";
+
     public static final String APPLICATION_TIME_ZONE =
             PropertyUtils.getInstance().properties.getProperty("spring.application.timezone");
     public static final int IDENTITY_LENGTH = 7;

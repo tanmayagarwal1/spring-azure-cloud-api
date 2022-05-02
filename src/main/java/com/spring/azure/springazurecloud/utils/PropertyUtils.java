@@ -1,5 +1,6 @@
 package com.spring.azure.springazurecloud.utils;
 
+import com.spring.azure.springazurecloud.configuration.constants.Constants;
 import org.springframework.core.io.ClassPathResource;
 
 import java.util.Properties;
@@ -9,7 +10,7 @@ public class PropertyUtils {
     public Properties properties = new Properties();
 
     public PropertyUtils() {
-        ClassPathResource classPathResource = new ClassPathResource("/properties/dev.properties");
+        ClassPathResource classPathResource = new ClassPathResource(System.getenv(Constants.PROPERTIES_ENVIRONMENT_VAR));
         try {
             properties.load(classPathResource.getInputStream());
             LogHelper.logInfo("In Properties File");

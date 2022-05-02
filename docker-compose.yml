@@ -1,0 +1,26 @@
+version: "2.1"
+services:
+  db-1 :
+    image : mysql
+    container_name: db-1
+    volumes:
+      - ./schema:/docker-entrypoint-initdb.d
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+    healthcheck:
+      test: [ "CMD", "mysqladmin" ,"ping", "-h", "localhost" ]
+      timeout: 20s
+      retries: 10
+    ports:
+      - "3307:3306"
+
+  server-1:
+    image: my-server
+    container_name: server-1
+    environment:
+      - ACTIVE_PROFILES=/properties/docker.properties
+    ports:
+      - "8081:8080"
+    depends_on:
+      db-1 :
+          condition : service_healthy
