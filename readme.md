@@ -26,7 +26,7 @@ The API Also has spring security implementation via JWT Tokens
       - [Container Registry](#Container-Registry)
     - [Making Payment](#Making-Payment)
     - [Docker](#Docker)
-- [Developing Helm Chart](#Helm)
+- [Kubernetes and Helm](#Kubernetes-and-Helm)
 
 ## Technologies
 1. Java
@@ -148,5 +148,26 @@ docker compose up -d
 docker compose down
 ```
 
-## Developing Helm Chart
+## Kubernetes and Helm
+
+The Helm Chart for the application has been developed in the ```./Helm``` directory of the Project. For Emulating a Kubernetes Cluster, we can use KIND which allows to create disposable Kubernetes clusters as docker containers. 
+
+The Helm Chart covers : 
+1. Application Deployment
+2. Application Secrets Deployment
+3. Application Ingress Deployment 
+4. MySQL Deployment
+5. MySQL ConfigMap Deployment
+6. Horizontal Pod Autoscaler Deployment
+
+As a pre-requist ensure that Docker is installed on the System and then proceed to install Helm and Kind
+
+Run the following commands for deploying the application
+
+```sh
+kind create cluster --name=development-cluster --image=kindest/node:v1.22.7
+cd Helm
+helm install spring-azure-cloud-api-helm spring-azure-cloud-api-helm
+kubectl get all
+```
 
