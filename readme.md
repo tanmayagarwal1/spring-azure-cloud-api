@@ -25,8 +25,8 @@ The API Also has spring security implementation via JWT Tokens
       - [APIM](#APIM)
       - [Container Registry](#Container-Registry)
     - [Making Payment](#Making-Payment)
-    - [Docker]
-- [Developing Helm Chart]
+    - [Docker](#Docker)
+- [Developing Helm Chart](#Helm)
 
 ## Technologies
 1. Java
@@ -137,5 +137,16 @@ Resource Group being marked as `ACTIVE` :
 
 <img width="338" alt="Screenshot 2022-05-08 at 11 07 09 AM" src="https://user-images.githubusercontent.com/81710149/167283419-576c2d9f-69f6-43e5-9b20-806d2e0ec733.png">
 
+## Docker
 
+The Dockerfile and the Docker Compose yml files can be used to containerize the application. before running the docker commands, run the docker-build.sh file to create the docker image. Then run the docker compose command. The sql scripts are available in ./schema/init.sql which is mounted as a volume to the docker's MySQL instance. The commands to run are as follows : 
+
+```bash
+./docker-build.sh
+docker compose -d up
+
+docker compose -d down
+```
+
+## Developing Helm Chart
 
