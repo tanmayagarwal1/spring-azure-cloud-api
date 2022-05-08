@@ -4,7 +4,7 @@ services:
     image : mysql
     container_name: db-1
     volumes:
-      - ./schema:/docker-entrypoint-initdb.d
+      - ./Schema:/docker-entrypoint-initdb.d
     environment:
       - MYSQL_ROOT_PASSWORD=password
     healthcheck:
