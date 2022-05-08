@@ -143,9 +143,9 @@ The Dockerfile and the Docker Compose yml files can be used to containerize the 
 
 ```bash
 ./docker-build.sh
-docker compose -d up
+docker compose up -d
 
-docker compose -d down
+docker compose down
 ```
 
 ## Developing Helm Chart
