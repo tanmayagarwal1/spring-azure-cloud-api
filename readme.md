@@ -1,6 +1,6 @@
 # Spring-Azure-Cloud-Api
-This project aims to replicate the functunality of Azure Cloud by mocking their provided services. This project serves as a proof of concept for working on various intricate backend technologies while building loosely coupled and highly cohersive code.
-This project focuses on Mocking the below services provided on Azure Cloud : 
+This project aims to replicate the functunality of Azure Cloud by implementing their provided services. This project serves as a proof of concept for working on various intricate backend technologies while building loosely coupled and highly cohersive code.
+This project focuses on replicating the below services provided on Azure Cloud : 
 1. Azure Kubernetes Services
 2. Storage Accounts
 3. Container Registries
@@ -42,7 +42,7 @@ The API Also has spring security implementation via JWT Tokens
 
 ## Getting Started
 
-To Start using the API To provision the mock resoources, we first need to generate the Access Token for using the API.
+To Start using the API To provision the mock resources, we first need to generate the Access Token for using the API.
 Before We move to generating the access token we need locally setup the project. 
 
 ## Local Setup
